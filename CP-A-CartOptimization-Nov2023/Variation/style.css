@@ -1,0 +1,568 @@
+/* Variation */
+
+.ti10 {}
+
+/* Content */
+
+.ti10 .content {
+	padding-top: 25px;
+}
+
+/* "Shopping Cart" Heading */
+
+/* NOTE: There is a popup with an `h1` element,
+ * so this targets the one within `.cart-section`. */
+
+.ti10 .cart-section h1 {
+	font-size: 26px;
+	line-height: 1.1923076923; /* 31px */
+	font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+	.ti10 .cart-section h1 {
+		font-size: 36px;
+		line-height: 1.1944444444; /* 43px */
+	}
+}
+
+/* Cart */
+
+.ti10 .cart__wrapper {
+	margin-top: 18px;
+	font-family: "Eurostile Next";
+}
+
+@media (min-width: 1024px) {
+	.ti10 .cart__wrapper {
+		display: grid;
+		grid-template-columns: 1fr 340px;
+		grid-template-rows: none;
+		margin-top: 34px;
+	}
+}
+
+/* Product Listing */
+
+.ti10 .cart__wrapper > .columns:first-child {
+	display: block;
+	float: none;
+	width: auto;
+}
+
+	/* Product List Headings */
+
+	.ti10 .cart__item-headings {
+		display: none;
+	}
+
+	@media (min-width: 1100px) {
+		.ti10 .cart__item-headings {
+			display: grid;
+			grid-template-columns: 1fr 120px 103px 120px;
+			padding: 0 0 12px 55px;
+		}
+	}
+
+		.ti10 .cart__item-heading {
+			line-height: 1.5; /* 24px */
+			font-weight: 700;
+			text-align: center;
+		}
+
+		.ti10 .cart__item-heading--product {
+			text-align: left;
+			/* background-color: pink; */
+		}
+
+		.ti10 .cart__item-heading--price {
+			/* background-color: yellow; */
+		}
+
+		.ti10 .cart__item-heading--quantity {
+			/* background-color: cyan; */
+		}
+
+		.ti10 .cart__item-heading--subtotal {
+			/* background-color: lightcyan; */
+		}
+
+	/* Individual Product */
+
+	.ti10 .cart__item {
+		display: grid;
+		grid-template-columns: 100px 1fr;
+		align-items: start;
+		margin: 0;
+		padding: 30px 0 78px 0;
+		border-bottom-color: #e5e5e5;
+		/* background-color: pink; */
+	}
+
+	.ti10 .cart__item[data-line-id="1"] {
+		border-top: 1px solid #dddddd;
+	}
+
+	@media (min-width: 1100px) {
+		.ti10 .cart__item {
+			grid-template-columns: 110px 1fr;
+			align-items: center;
+			padding: 30px 0 30px 55px;
+		}
+	}
+
+		/* Image */
+
+		.ti10 .cart__item--image {
+			width: 100%;
+			max-width: 110px;
+			margin: 0;
+		}
+
+			.ti10 .cart__item--image a {
+				margin: 0;
+			}
+
+				.ti10 .cart__item--image .image-element__wrap {}
+
+					.ti10 .cart__item--image img {}
+
+		/* Title, Quantity, and Price */
+
+		.ti10 .cart__item--content {
+			width: auto;
+			margin: 0;
+			padding-left: 15px;
+		}
+
+		@media (min-width: 1100px) {
+			.ti10 .cart__item--content {
+				display: grid;
+				grid-template-columns: 1fr 120px 103px 120px;
+				align-items: center;
+				padding-left: 20px;
+			}
+		}
+
+			/* Title Wrapper */
+
+			.ti10 .cart__item--title-wrapper {
+				padding-right: 20px;
+				/* background: pink; */
+			}
+
+				/* Title */
+
+				.ti10 .cart__item--title {
+					margin: 0;
+					font-size: 16px;
+					line-height: 1.1875; /* 19px */
+					font-weight: 700;
+				}
+
+				@media (min-width: 1100px) {
+					.ti10 .cart__item--title {
+						font-size: 18px;
+						line-height: 1.1111111111; /* 20px */
+					}
+				}
+
+					.ti10 .cart__item--title a {}
+
+				/* Meta */
+
+				.ti10 .cart__item .meta:not(.cart__item--discount) {
+					margin-top: 8px;
+				}
+
+			/* Empty `p` element. */
+
+			.ti10 .cart__item p:empty {
+				display: none;
+			}
+
+			/* Price */
+
+			.ti10 .modal_price {
+				margin-top: 6px;
+				font-size: 14px;
+				line-height: 1.1428571429; /* 16px */
+				/* background: yellow; */
+			}
+
+			@media (min-width: 1100px) {
+				.ti10 .modal_price {
+					margin-top: 0;
+					font-size: 16px;
+					line-height: 1.5; /* 24px */
+					font-weight: 700;
+					text-align: center;
+					/* background: yellow; */
+				}
+			}
+
+				.ti10 .modal_price .money {
+					display: block;
+					font-weight: 400;
+				}
+
+				.ti10 .modal_price .money:not(:empty):after {
+					content: "/ea";
+				}
+
+				@media (min-width: 1100px) {
+					.ti10 .modal_price .money:not(:empty):after {
+						content: none;
+					}
+				}
+
+				.ti10 .modal_price .money--subtotal {
+					font-size: 16px;
+					line-height: 1.5; /* 24px */
+					font-weight: 700;
+				}
+
+				.ti10 .modal_price .money--subtotal:not(:empty):after {
+					content: none;
+				}
+
+				@media (min-width: 1100px) {
+					.ti10 .modal_price .money--subtotal {
+						display: none;
+					}
+				}
+
+				.ti10 .modal_price .sale {}
+
+				@media (min-width: 1100px) {
+					.ti10 .modal_price .sale {
+						font-weight: 700;
+					}
+				}
+
+				.ti10 .modal_price .money--no-was-price {
+					font-weight: 400;
+					color: #161616;
+				}
+
+				@media (min-width: 1100px) {
+					.ti10 .modal_price .money--no-was-price {}
+				}
+
+				.ti10 .modal_price .was_price {}
+
+				@media (min-width: 1100px) {
+					.ti10 .modal_price .was_price {
+						font-size: 13px;
+						line-height: 1.4615384615; /* 19px */
+						font-weight: 400;
+					}
+				}
+
+			/* NOTE: Include a second instance of the
+			* Subtotal for easier use with Mobile. */
+
+			/* Discount */
+
+			/* NOTE: Temporarily hidden due to design. Is this needed? */
+
+			.ti10 .cart__item--discount {
+				display: none;
+				margin: 0;
+			}
+
+			/* Quantity */
+
+			.ti10 .product-quantity-box,
+			.ti10 #cart_form .product-quantity-box {
+				position: absolute;
+				left: 0;
+				bottom: 30px;
+				float: none;
+				width: auto;
+				margin: 0;
+				/* background: cyan; */
+				z-index: 1;
+			}
+
+			@media (min-width: 1100px) {
+				.ti10 .product-quantity-box,
+				.ti10 #cart_form .product-quantity-box {
+					position: static;
+				}
+			}
+
+				.ti10 #cart_form .product-quantity-box .product-minus {
+					width: 32px;
+				}
+
+				.ti10 #cart_form .product-quantity-box .quantity {
+					width: 39px;
+				}
+
+				.ti10 #cart_form .product-quantity-box .product-plus {
+					width: 32px;
+				}
+
+			/* Subtotal */
+
+			.ti10 .price_total {
+				display: none;
+				/* background: lightcyan; */
+			}
+
+			@media (min-width: 1100px) {
+				.ti10 .price_total {
+					display: block;
+					margin: 0;
+					font-size: 16px;
+					line-height: 1.5; /* 24px */
+					font-weight: 700;
+					text-align: center;
+					/* background: lightcyan; */
+				}
+			}
+
+				.ti10 .price_total strong {
+					display: none;
+				}
+
+				.ti10 .price_total .money {}
+
+				.ti10 .price_total .was_price {
+					display: none;
+				}
+
+			/* Remove */
+
+			.ti10 .cart__remove-btn {
+				top: auto;
+				right: 12px;
+				bottom: 33px;
+			}
+
+			@media (min-width: 1100px) {
+				.ti10 .cart__remove-btn {
+					top: 50%;
+					right: auto;
+					bottom: auto;
+					left: 17px;
+					transform: translateY(-50%);
+				}
+			}
+
+				.ti10 .cart__remove-btn .remove-text {
+					display: none;
+				}
+
+				.ti10 .cart__remove-btn .remove-icon {
+					margin: 0;
+				}
+
+				.ti10 .cart__remove-btn .remove-icon:before {
+					color: #ca3b4c;
+				}
+
+/* Sidebar */
+
+.ti10 .cart__wrapper > .columns:last-child {
+	display: block;
+	float: none;
+	width: auto;
+	margin-top: 30px;
+}
+
+@media (min-width: 1024px) {
+	.ti10 .cart__wrapper > .columns:last-child {
+		margin-top: 0;
+	}
+}
+
+	/* Cart Summary */
+
+	.ti10 .subtotal {
+		padding: 27px 25px 30px 25px;
+		background-color: #f7f7f7;
+		border-radius: 4px;
+	}
+
+	@media (min-width: 1024px) {
+		.ti10 .subtotal {
+			padding: 27px 48px 30px 48px;
+		}
+	}
+
+		.ti10 .subtotal .subtotal__heading {
+			margin-bottom: 0;
+			padding-bottom: 27px;
+			font-size: 22px;
+			line-height: 1.1818181818; /* 26px */
+			font-weight: 700;
+			text-align: center;
+			border-bottom: 1px solid #e5e5e5;
+		}
+
+		.ti10 .subtotal .cart_subtotal {
+			margin-top: 16px;
+			margin-bottom: 0;
+			font-size: 16px;
+			line-height: 1.1875; /* 19px */
+			font-weight: 400;
+		}
+
+		.ti10 .subtotal .cart_savings {
+			margin-top: 11px;
+			margin-bottom: 0;
+			font-size: 16px;
+			line-height: 1.1875; /* 19px */
+		}
+
+			.ti10 .subtotal .cart_savings span {
+				color: #161616;
+			}
+
+				.ti10 .subtotal .cart_savings .money {
+					color: #f20019;
+				}
+
+				.ti10 .subtotal .cart_savings .money:before {
+					content: "\002D";
+					padding-right: 2px;
+				}
+
+		.ti10 .subtotal .subtotal__sale-total {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			margin-top: 18px;
+			padding-top: 21px;
+			font-weight: 700;
+			border-top: 1px solid #e5e5e5;
+		}
+
+			.ti10 .subtotal .subtotal__sale-total .money {
+				font-size: 20px;
+				line-height: 1.2; /* 24px */
+			}
+
+		.ti10 .subtotal .affirm-as-low-as {
+			float: none;
+			max-width: none;
+			margin: 22px 0 0 0;
+			font-size: 13px;
+			line-height: 1.3846153846; /* 18px */
+			font-family: "Avenir Next", sans-serif;
+			text-align: center !important;
+		}
+
+		.ti10 .subtotal .checkout_button {
+			margin-top: 24px;
+		}
+
+			.ti10 .subtotal .checkout_button #checkout {
+				padding-left: 10px;
+				padding-right: 10px;
+				min-height: 45px;
+				font-size: 13px;
+				line-height: 0.7692307692; /* 10px */
+				letter-spacing: 0;
+			}
+
+				.ti10 .subtotal .checkout_button .icon-lock {
+					position: relative;
+					top: -1px;
+					margin-right: 7px;
+				}
+
+					.ti10 .subtotal .checkout_button .icon-lock:before {
+						content: "";
+						width: 7px;
+						height: 8px;
+						background-image: url("https://storage.googleapis.com/images.trinity.one/Corsa%20Performance/CP-A-CartOptimization-Nov2023/Lock.svg");
+						background-size: 7px 8px;
+						background-position: 0 0;
+						background-repeat: no-repeat;
+					}
+
+	/* Taxes and Shipping */
+
+	.ti10 .taxes-and-shipping {
+		margin: 10px 0 0 0;
+		font-size: 13px;
+		line-height: 1.3846153846; /* 18px */
+		font-family: "Avenir Next", sans-serif;
+		text-align: center;
+		color: #161616;
+	}
+
+		.ti10 .taxes-and-shipping a {
+			color: #161616;
+			text-decoration: underline;
+		}
+
+		.ti10 .taxes-and-shipping a:focus,
+		.ti10 .taxes-and-shipping a:hover {}
+
+	/* Additional Payment Options */
+
+	.ti10 .additional-checkout-buttons {
+		margin-top: 16px;
+	}
+
+		.ti10 .additional-checkout-buttons > .dynamic-checkout__content {
+			padding-top: 0;
+		}
+
+			.ti10 .additional-checkout-buttons ul {
+				gap: 10px;
+				align-items: center;
+			}
+
+			@media (min-width: 1024px) {
+				.ti10 .additional-checkout-buttons ul {
+					padding-left: 5px !important;
+					padding-right: 5px !important;
+				}
+			}
+
+				.ti10 .additional-checkout-buttons li {
+					width: 100%;
+					max-width: 750px;
+					margin: 0 !important;
+				}
+
+	/* GovX ID */
+
+	.ti10 .govx-id-full-wrapper {
+		display: block;
+		margin-top: 15px;
+		padding: 0 !important;
+		font-family: "Eurostile Next";
+	}
+
+		.ti10 .govx-id-full-wrapper .govx-id-full {
+			width: auto;
+			min-width: auto;
+			max-width: none;
+			padding: 24px 22px 19px 22px;
+			font-family: inherit;
+		}
+
+		@media (min-width: 1024px) {
+			.ti10 .govx-id-full-wrapper .govx-id-full {
+				padding: 26px 22px 23px 22px;
+			}
+		}
+
+			.ti10 .govx-id-full-wrapper p {
+				margin-bottom: 8px;
+				font-family: inherit;
+				line-height: 1.2307692308; /* 16px */
+				text-align: center;
+			}
+
+			@media (min-width: 1024px) {
+				.ti10 .govx-id-full-wrapper p {
+					margin-bottom: 19px;
+				}
+			}
